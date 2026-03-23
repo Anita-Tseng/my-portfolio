@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anita Tseng Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* 1. 全域設定 */
+* { box-sizing: border-box; }
+body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 40px 0; place-items: center; }
+
+.slide-container {
+  align-items: flex-start;
+  background-color: #0f172a; /* 深藍色背景 */
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Urbanist', sans-serif;
+  height: 720px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
+  width: 1280px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 背景裝飾：漸層光暈 */
+.slide-container::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.slide-container::after {
+  content: '';
+  position: absolute; bottom: 30px; left: 60px; right: 60px;
+  height: 1px; background: rgba(255, 255, 255, 0.1); z-index: 1;
+}
+
+.slide-container > * { position: relative; z-index: 2; }
+
+/* 2. 字體與排版 */
+.slide-container h1 { color: #fff; font-family: 'Playfair Display', serif; font-size: 72px; margin: 0; line-height: 1.1; }
+.slide-container h1 span { color: #10b981; } 
+.slide-container .slide-title { color: #fff; font-size: 36px; font-weight: 700; margin-bottom: 30px; text-align: left; width: 100%; border-left: 5px solid #10b981; padding-left: 20px; text-transform: uppercase; letter-spacing: 2px; }
+.slide-container h3 { color: #10b981; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.slide-container p, .slide-container li, .slide-container td, .slide-container th { color: #cbd5e1; font-size: 17px; line-height: 1.6; }
+.slide-container .subtitle { font-size: 24px; color: #94a3b8; margin-top: 20px; max-width: 800px; }
+
+/* 3. 作品集卡片佈局 */
+.content-area { display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; }
+.portfolio-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+.portfolio-card:hover { border-color: #10b981; background: rgba(16, 185, 129, 0.05); transform: translateY(-3px); }
+
+.portfolio-link { display: inline-flex; align-items: center; margin-top: 10px; color: #10b981; text-decoration: none; font-weight: 600; font-size: 13px; gap: 8px; }
+
+/* 表格樣式 */
+.table-layout table { width: 100%; border-collapse: collapse; }
+.table-layout th { background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 15px; text-align: left; border-bottom: 2px solid #10b981; font-size: 14px; }
+.table-layout td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); vertical-align: top; }
+
+/* 4. PDF 匯出優化 (列印模式) */
+@media print {
+    @page {
+        size: 1280px 720px; /* 強制設定 PDF 頁面尺寸與簡報一致 */
+        margin: 0;
+    }
+    body {
+        background-color: #fff;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .slide-container {
+        page-break-after: always; /* 強制每一頁後分頁 */
+        break-after: page;
+        border-radius: 0;
+        box-shadow: none;
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        position: relative;
+        -webkit-print-color-adjust: exact; /* 確保背景顏色能被列印 */
+        print-color-adjust: exact;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide-container">
+    <div class="content-area" style="text-align: center; align-items: center;">
+        <h1>Anita Tseng <span>Portfolio</span></h1>
+        <p class="subtitle">Content & Communications Strategy Specialist<br>Shaping Narratives for Web3, Global Brands & Tech Innovation</p>
+    </div>
+</div>
+
+<!-- Slide 2: Editorial & Global Strategy -->
+<div class="slide-container">
+    <h2 class="slide-title">Editorial & Global Strategy</h2>
+    <div class="content-area">
+        <p style="margin-bottom: 20px;">Translating complex technical innovation and brand values into cross-border growth strategies.</p>
+        <div class="portfolio-grid">
+            <!-- Web3 -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Web3 & Point Economy</h3>
+                    <p style="font-size: 14px;">Editorial column for CMoney exploring digital loyalty and Web3 economic models.</p>
+                </div>
+                <a href="https://money.cmoney.tw/article/29543" target="_blank" class="portfolio-link">View Column <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            
+            <!-- Fintech -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Fintech & Regional Impact</h3>
+                    <p style="font-size: 14px;">Coordinated strategic press releases for Commercial Times and Storm Media on digital assets.</p>
+                </div>
+                <div style="display:flex; gap: 10px;">
+                    <a href="https://www.ctee.com.tw/news/20250307700109-439901" target="_blank" class="portfolio-link">CTEE <i class="fa-solid fa-link"></i></a>
+                    <a href="https://www.storm.mg/article/5359303" target="_blank" class="portfolio-link">Storm <i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+
+            <!-- AI & Blockchain -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>AI & Blockchain Trust</h3>
+                    <p style="font-size: 14px;">Role of Blockchain in ensuring data integrity within the AI ecosystem.</p>
+                </div>
+                <a href="https://www.leadbestgroup.com/news/the-role-of-blockchain-in-ensuring-trustworthy-data-in-the-ai-era" target="_blank" class="portfolio-link">Read Summary <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- Ambassador -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Global Ambassador Program</h3>
+                    <p style="font-size: 14px;">Strategy and landing page coordination for The Meatstick's global influencer initiative.</p>
+                </div>
+                <a href="https://themeatstick.com/pages/brand-ambassador-program" target="_blank" class="portfolio-link">Program Page <i class="fa-solid fa-globe"></i></a>
+            </div>
+
+            <!-- Industrial Safety -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Industrial Safety Tech</h3>
+                    <p style="font-size: 14px;">Narrative strategy on Offshore Wind Farm safety measures and tech safeguards.</p>
+                </div>
+                <a href="https://www.leadbestgroup.com/news/offshore-wind-farm-incident-highlights-urgent-need-for-technology-driven-safety-measures" target="_blank" class="portfolio-link">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Media & Creator Features -->
+<div class="slide-container">
+    <h2 class="slide-title">Media & Creator Features</h2>
+    <div class="content-area">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div style="background: rgba(16, 185, 129, 0.1); padding: 25px; border-radius: 12px; border-left: 4px solid #10b981;">
+                <h3>IEAT Magazine Exclusive</h3>
+                <p style="font-style: italic; font-size: 15px; margin-bottom: 10px;">"Innovation Concepts & Digital Economy Acceleration"</p>
+                <p style="font-size: 14px;">Managed executive interview for Taipei Importers & Exporters Association, scaling regional authority.</p>
+                <a href="https://www.ieatpe.org.tw/magazine/ebook397/innovation-concept.html" target="_blank" class="portfolio-link">Read Full Interview →</a>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3>Creator Strategy & Reviews</h3>
+                <p style="font-style: italic; font-size: 15px; margin-bottom: 10px;">Technical Advisory & Content Guidelines</p>
+                <p style="font-size: 14px;">Directed content guidelines and acted as a consultant for global creators, resulting in 10+ video reviews.</p>
+                <a href="https://youtube.com/playlist?list=PLZrVywpRPl8CdZdFggB0P9jUEmD5tfqS_&si=PI16peB360NxyjTI" target="_blank" class="portfolio-link">YouTube Results <i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Capabilities -->
+<div class="slide-container">
+    <h2 class="slide-title">Capabilities</h2>
+    <div class="content-area">
+        <div class="table-layout">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="30%">Category</th>
+                        <th width="70%">Strategic Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Editorial & Global</strong></td>
+                        <td>Scaling narratives for international markets and tech-savvy investors.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media & Creators</strong></td>
+                        <td>Establishing authority via Tier-1 interviews and influencer synergy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Industry Events</strong></td>
+                        <td>Catalyzing C-level networking through disruption-focused content.</td>
+                    </tr>
+                </tbody>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Contact -->
+<div class="slide-container" style="text-align: center; align-items: center;">
+    <h2 class="slide-title" style="border: none; text-align: center;">Contact</h2>
+    <div class="content-area" style="justify-content: center; align-items: center;">
+        <h1 style="font-size: 60px;">Anita <span>Tseng</span></h1>
+        <p class="subtitle" style="text-align: center;">Content Strategist | PR Architect</p>
+        <div style="margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; width: 100%;">
+            <p style="margin: 0;"><i class="fa-solid fa-envelope" style="color:#10b981; margin-right: 10px;"></i> anita8153@gmail.com</p>
+            <p style="margin: 0;"><i class="fa-brands fa-linkedin" style="color:#10b981; margin-right: 10px;"></i> <a href="https://www.linkedin.com/in/anita-tseng-114983b2/" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600;">Anita Tseng</a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
