@@ -54,8 +54,8 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
 .slide-container h1 { color: #fff; font-family: 'Playfair Display', serif; font-size: 72px; margin: 0; line-height: 1.1; }
 .slide-container h1 span { color: #10b981; } 
 .slide-container .slide-title { color: #fff; font-size: 36px; font-weight: 700; margin-bottom: 30px; text-align: left; width: 100%; border-left: 5px solid #10b981; padding-left: 20px; text-transform: uppercase; letter-spacing: 2px; }
-.slide-container h3 { color: #10b981; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
-.slide-container p, .slide-container li, .slide-container td, .slide-container th { color: #cbd5e1; font-size: 17px; line-height: 1.6; }
+.slide-container h3 { color: #10b981; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.slide-container p, .slide-container li, .slide-container td, .slide-container th { color: #cbd5e1; font-size: 16px; line-height: 1.5; }
 .slide-container .subtitle { font-size: 24px; color: #94a3b8; margin-top: 20px; max-width: 800px; }
 
 /* 3. 作品集卡片佈局 */
@@ -74,7 +74,7 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
 /* 4. PDF 匯出優化 (列印模式) */
 @media print {
     @page {
-        size: 1280px 720px; /* 強制設定 PDF 頁面尺寸與簡報一致 */
+        size: 1280px 720px; 
         margin: 0;
     }
     body {
@@ -84,7 +84,7 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
         margin: 0;
     }
     .slide-container {
-        page-break-after: always; /* 強制每一頁後分頁 */
+        page-break-after: always;
         break-after: page;
         border-radius: 0;
         box-shadow: none;
@@ -92,7 +92,7 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
         height: 720px;
         margin: 0;
         position: relative;
-        -webkit-print-color-adjust: exact; /* 確保背景顏色能被列印 */
+        -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 }
@@ -115,20 +115,18 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
     <div class="content-area">
         <p style="margin-bottom: 20px;">Translating complex technical innovation and brand values into cross-border growth strategies.</p>
         <div class="portfolio-grid">
-            <!-- Web3 -->
             <div class="portfolio-card">
                 <div>
                     <h3>Web3 & Point Economy</h3>
-                    <p style="font-size: 14px;">Editorial column for CMoney exploring digital loyalty and Web3 economic models.</p>
+                    <p>Editorial column for CMoney exploring digital loyalty and Web3 economic models.</p>
                 </div>
                 <a href="https://money.cmoney.tw/article/29543" target="_blank" class="portfolio-link">View Column <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             
-            <!-- Fintech -->
             <div class="portfolio-card">
                 <div>
                     <h3>Fintech & Regional Impact</h3>
-                    <p style="font-size: 14px;">Coordinated strategic press releases for Commercial Times and Storm Media on digital assets.</p>
+                    <p>Coordinated strategic press releases for Commercial Times and Storm Media on digital assets.</p>
                 </div>
                 <div style="display:flex; gap: 10px;">
                     <a href="https://www.ctee.com.tw/news/20250307700109-439901" target="_blank" class="portfolio-link">CTEE <i class="fa-solid fa-link"></i></a>
@@ -136,29 +134,26 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
                 </div>
             </div>
 
-            <!-- AI & Blockchain -->
             <div class="portfolio-card">
                 <div>
                     <h3>AI & Blockchain Trust</h3>
-                    <p style="font-size: 14px;">Role of Blockchain in ensuring data integrity within the AI ecosystem.</p>
+                    <p>Role of Blockchain in ensuring data integrity within the AI ecosystem.</p>
                 </div>
                 <a href="https://www.leadbestgroup.com/news/the-role-of-blockchain-in-ensuring-trustworthy-data-in-the-ai-era" target="_blank" class="portfolio-link">Read Summary <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Ambassador -->
             <div class="portfolio-card">
                 <div>
                     <h3>Global Ambassador Program</h3>
-                    <p style="font-size: 14px;">Strategy and landing page coordination for The Meatstick's global influencer initiative.</p>
+                    <p>Strategy and landing page coordination for The Meatstick's global influencer initiative.</p>
                 </div>
                 <a href="https://themeatstick.com/pages/brand-ambassador-program" target="_blank" class="portfolio-link">Program Page <i class="fa-solid fa-globe"></i></a>
             </div>
 
-            <!-- Industrial Safety -->
             <div class="portfolio-card">
                 <div>
                     <h3>Industrial Safety Tech</h3>
-                    <p style="font-size: 14px;">Narrative strategy on Offshore Wind Farm safety measures and tech safeguards.</p>
+                    <p>Narrative strategy on Offshore Wind Farm safety measures and tech safeguards.</p>
                 </div>
                 <a href="https://www.leadbestgroup.com/news/offshore-wind-farm-incident-highlights-urgent-need-for-technology-driven-safety-measures" target="_blank" class="portfolio-link">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
@@ -174,20 +169,76 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
             <div style="background: rgba(16, 185, 129, 0.1); padding: 25px; border-radius: 12px; border-left: 4px solid #10b981;">
                 <h3>IEAT Magazine Exclusive</h3>
                 <p style="font-style: italic; font-size: 15px; margin-bottom: 10px;">"Innovation Concepts & Digital Economy Acceleration"</p>
-                <p style="font-size: 14px;">Managed executive interview for Taipei Importers & Exporters Association, scaling regional authority.</p>
+                <p>Managed executive interview for Taipei Importers & Exporters Association, scaling regional authority.</p>
                 <a href="https://www.ieatpe.org.tw/magazine/ebook397/innovation-concept.html" target="_blank" class="portfolio-link">Read Full Interview →</a>
             </div>
             <div style="background: rgba(255, 255, 255, 0.03); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
                 <h3>Creator Strategy & Reviews</h3>
                 <p style="font-style: italic; font-size: 15px; margin-bottom: 10px;">Technical Advisory & Content Guidelines</p>
-                <p style="font-size: 14px;">Directed content guidelines and acted as a consultant for global creators, resulting in 10+ video reviews.</p>
+                <p>Directed content guidelines and acted as a consultant for global creators, resulting in 10+ video reviews.</p>
                 <a href="https://youtube.com/playlist?list=PLZrVywpRPl8CdZdFggB0P9jUEmD5tfqS_&si=PI16peB360NxyjTI" target="_blank" class="portfolio-link">YouTube Results <i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 4: Capabilities -->
+<!-- Slide 4: Industry Events & Strategic Partnerships -->
+<div class="slide-container">
+    <h2 class="slide-title">Industry Events & Partnerships</h2>
+    <div class="content-area">
+        <div class="portfolio-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <!-- AI + Web3 Summit -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>AI + Web3 Summit</h3>
+                    <p>Organized a high-profile summit with 130+ industry leaders, focusing on AI integration and emerging Web3 opportunities.</p>
+                </div>
+                <div style="display:flex; gap: 10px;">
+                    <a href="https://www.leadbestgroup.com/news/web3-changes-the-game-new-opportunities-emerge-with-ai-integration" target="_blank" class="portfolio-link">News <i class="fa-solid fa-newspaper"></i></a>
+                    <a href="https://www.facebook.com/LeadBest.io/posts/pfbid0BoWhmGR7EANbkHko2pc9TdXJQrdiyFqoxqWY5xUNucBy59UwNtz44qEwUHX6CHovl" target="_blank" class="portfolio-link">Highlights <i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- AI Agent Sharing -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>AI Agent Case Study</h3>
+                    <p>Strategic event featuring Google Cloud partnership for Spiritz Explorer’s AI-powered Smart Liquor Finder.</p>
+                </div>
+                <div style="display:flex; gap: 10px;">
+                    <a href="https://www.leadbestgroup.com/news/spiritz-explorer-partners-with-google-cloud-to-launch-ai-powered-smart-liquor-finder-ushering-in-a-new-era-of-drink-selection" target="_blank" class="portfolio-link">News <i class="fa-solid fa-newspaper"></i></a>
+                    <a href="https://www.facebook.com/LeadBest.io/posts/pfbid02dhoi9weiSvFBEFpmwsAVRnz5tnoSTwB3hZGwxmTKnJYoRmavt6xDrNeS78DqLxM1l" target="_blank" class="portfolio-link">Highlights <i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- Tokyo RWA Innovation -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Tokyo RWA Innovation</h3>
+                    <p>Coordinated the Blockstream & EchoX strategic partnership to drive RWA innovation in the Japan and APAC market.</p>
+                </div>
+                <div style="display:flex; gap: 10px;">
+                    <a href="https://www.leadbestgroup.com/news/blockstream-and-echo-x-form-strategic-partnership-to-drive-rwa-innovation-in-japan-and-asia-pacific" target="_blank" class="portfolio-link">News <i class="fa-solid fa-newspaper"></i></a>
+                    <a href="https://www.facebook.com/photo.php?fbid=618551807219324" target="_blank" class="portfolio-link">Highlights <i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- Taiwan-Japan Press Conference -->
+            <div class="portfolio-card">
+                <div>
+                    <h3>Cross-Border Strategic Alliance</h3>
+                    <p>Managed the EchoX, CoinPost, and NeroHoldings press conference, strengthening Taiwan-Japan enterprise collaboration.</p>
+                </div>
+                <div style="display:flex; gap: 10px;">
+                    <a href="https://www.bnext.com.tw/article/87793/echox-coinpost-neroholdings" target="_blank" class="portfolio-link">BNext <i class="fa-solid fa-newspaper"></i></a>
+                    <a href="https://www.facebook.com/TheEchoXio/posts/pfbid0brEa8JVmbaq2sxQZ5x7E1muSPwNP5hN4dnasKjQPDjkdKVGj2VE89GXBY3d7UyRkl" target="_blank" class="portfolio-link">Highlights <i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Capabilities -->
 <div class="slide-container">
     <h2 class="slide-title">Capabilities</h2>
     <div class="content-area">
@@ -210,16 +261,15 @@ body { background-color: #f1f5f9; display: grid; gap: 40px; grid-template-column
                     </tr>
                     <tr>
                         <td><strong>Industry Events</strong></td>
-                        <td>Catalyzing C-level networking through disruption-focused content.</td>
+                        <td>Catalyzing C-level networking through disruption-focused content and PR events.</td>
                     </tr>
                 </tbody>
-            </tbody>
             </table>
         </div>
     </div>
 </div>
 
-<!-- Slide 5: Contact -->
+<!-- Slide 6: Contact -->
 <div class="slide-container" style="text-align: center; align-items: center;">
     <h2 class="slide-title" style="border: none; text-align: center;">Contact</h2>
     <div class="content-area" style="justify-content: center; align-items: center;">
